@@ -1,0 +1,31 @@
+/* class Shape {
+
+    area: number;
+    color: string;
+
+    constructor(name:string,width:number,height:number){
+        this.area = width * height;
+        this.color = "pink";
+    };
+    shoutout(){
+        return `I'm ${this.color} ${this.name} with an area of ${this.area} cm²`
+
+    }
+}
+var square = new Shape("square",30,30);
+console.log(square.shoutout());
+console.log('Area of Shape:' + square.area);
+console.log('Name of Shape:' + square.name);
+console.log('Color of Shape:' + square.color);
+console.log('Width of Shape:' + square.width);
+console.log('Height of Shape:' + square.height); */
+var Greeter = /** @class */ (function () {
+    function Greeter(message) {
+        this.greeting = message;
+    }
+    Greeter.prototype.greet = function () {
+        return "hello " + this.greeting;
+    };
+    return Greeter;
+}());
+var greeter = new Greeter("world");
