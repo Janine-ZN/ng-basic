@@ -3,33 +3,21 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-<<<<<<< HEAD
     "ng-basic": {
-=======
-    "my-first-project": {
->>>>>>> 8373927c04ab0f188397cfd05969c8b4d92d3243
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-<<<<<<< HEAD
       "schematics": {
         "@schematics/angular:component":{
             "styleext":"scss"
         }
       },
-=======
-      "schematics": {},
->>>>>>> 8373927c04ab0f188397cfd05969c8b4d92d3243
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-<<<<<<< HEAD
             "outputPath": "dist/ng-basic",
-=======
-            "outputPath": "dist/my-first-project",
->>>>>>> 8373927c04ab0f188397cfd05969c8b4d92d3243
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -39,11 +27,7 @@
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
               "src/styles.scss"
-=======
-              "src/styles.css"
->>>>>>> 8373927c04ab0f188397cfd05969c8b4d92d3243
             ],
             "scripts": []
           },
