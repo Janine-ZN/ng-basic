@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
+
 import { AppComponent } from './app.component';
 import { RxjsAsyComponent } from './components/rxjs-asy/rxjs-asy.component';
 
@@ -12,9 +14,13 @@ import { RxjsAsyComponent } from './components/rxjs-asy/rxjs-asy.component';
   ],
   // 导入模板
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgZorroAntdModule
   ],
-  providers: [],
+  /* 配置 ng-zorro-antd 国际化(文案 及 日期) */
+  providers: [
+    { provide: NZ_I18N, useValue: zh_CN }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
