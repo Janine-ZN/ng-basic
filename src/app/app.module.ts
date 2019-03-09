@@ -5,12 +5,16 @@ import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 
 import { AppComponent } from './app.component';
 import { RxjsAsyComponent } from './components/rxjs-asy/rxjs-asy.component';
+import { BasicComponent } from './components/basic/basic.component';
+import { AntZorroComponent } from './components/ant-zorro/ant-zorro.component';
 
 @NgModule({
   // 声明组件
   declarations: [
     AppComponent,
-    RxjsAsyComponent
+    RxjsAsyComponent,
+    BasicComponent,
+    AntZorroComponent
   ],
   // 导入模板
   imports: [
