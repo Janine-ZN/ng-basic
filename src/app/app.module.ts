@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 
@@ -21,6 +22,7 @@ import { FormComponent } from './components/form/form.component';
   // 导入模板
   imports: [
     BrowserModule,
+    FormsModule,
     NgZorroAntdModule
   ],
   bootstrap: [AppComponent],
