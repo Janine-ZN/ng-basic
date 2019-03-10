@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { RxjsAsyComponent } from './components/rxjs-asy/rxjs-asy.component';
 import { BasicComponent } from './components/basic/basic.component';
 import { AntZorroComponent } from './components/ant-zorro/ant-zorro.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   // 声明组件
@@ -14,7 +15,8 @@ import { AntZorroComponent } from './components/ant-zorro/ant-zorro.component';
     AppComponent,
     RxjsAsyComponent,
     BasicComponent,
-    AntZorroComponent
+    AntZorroComponent,
+    FormComponent
   ],
   // 导入模板
   imports: [
