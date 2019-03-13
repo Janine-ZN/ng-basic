@@ -33,7 +33,7 @@ export class RxjsAsyComponent implements OnInit {
 
     const observeData = this.request.getRxjsData();
     observeData.subscribe((result) => {
-        console.log(result);
+      console.log(result);
     });
 
   }
