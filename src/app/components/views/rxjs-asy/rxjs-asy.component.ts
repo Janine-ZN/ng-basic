@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // commit
-import { RequestService } from '../../services/request.service';
+import { RequestService } from '../../../services/request.service';
 
 @Component({
   selector: 'app-rxjs-asy',
