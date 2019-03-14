@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FromTemplateValidationComponent implements OnInit {
   username = 'semlinker';
+  // versions = ['1.x', '2.x', '3.x'];
+  versions = ['', '1.x', '2.x', '4.x', '6.x'];
   constructor() { }
 
   ngOnInit() {
