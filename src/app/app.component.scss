@@ -2,3 +2,9 @@ $font_size:green;
 .myFont{
   color:$font_size
 }
+.left,.content,.right{
+  width: 420px;
+  height: 600px;
+  float: left;
+  border: 1px solid #333;
+}

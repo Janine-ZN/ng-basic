@@ -1,0 +1,14 @@
+.people-form{
+  width: 400px;
+  height: 350px;
+  margin: 0 auto;
+  text-align: center;
+  border:1px solid #000;
+  .people-context{
+    text-align: left;
+    // margin-left: 50px;
+    ul{
+      list-style: none;
+    }
+  }
+}
