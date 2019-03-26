@@ -13,6 +13,7 @@ import { FormComponent } from './components/views/form/form.component';
 import { SearchComponent } from './components/views/search/search.component';
 import { FormValidationComponent } from './components/views/form-validation/form-validation.component';
 import { FromTemplateValidationComponent } from './components/views/from-template-validation/from-template-validation.component';
+import { NoDataPipe } from './core/no-data.pipe';
 // import { AdminModule } from './components/routes/admin/admin.module';
 
 const appRoutes: Routes = [
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     FormComponent,
     SearchComponent,
     FormValidationComponent,
-    FromTemplateValidationComponent
+    FromTemplateValidationComponent,
+    NoDataPipe
   ],
   // 导入模板
   imports: [
