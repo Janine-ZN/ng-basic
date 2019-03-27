@@ -1,0 +1,20 @@
+{
+  "fruits": [{
+      "id": 1,
+      "name": "apple",
+      "price": "33"
+    },
+    {
+      "id": 2,
+      "name": "orange",
+      "price": "8.88"
+    }
+  ],
+  "users": [{
+    "name": {
+      "username": "admin",
+      "nickname": "dachui"
+    },
+    "pwd": "123456"
+  }]
+}
