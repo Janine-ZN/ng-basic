@@ -2,8 +2,12 @@
   <nz-header>
     <div class="logo"></div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
-      <li nz-menu-item>基础指令</li>
-      <li nz-menu-item>nav 2</li>
+      <li nz-menu-item>
+        <a routerLink="/home/directive" routerLinkActive="active">基础指令</a>
+      </li>
+      <li nz-menu-item>
+        <a routerLink="/home/form">nav 2</a>
+      </li>
       <li nz-menu-item>nav 3</li>
     </ul>
   </nz-header>
@@ -13,7 +17,9 @@
       <nz-breadcrumb-item>List</nz-breadcrumb-item>
       <nz-breadcrumb-item>App</nz-breadcrumb-item>
     </nz-breadcrumb>
-    <div style="background:#fff; padding: 24px; min-height: 280px;">Content</div>
+    <div style="background:#fff; padding: 24px; min-height: 600px;">
+      <router-outlet></router-outlet>
+    </div>
   </nz-content>
   <nz-footer style="text-align: center;">Angular Basic ©2019 By Janine</nz-footer>
 </nz-layout>
