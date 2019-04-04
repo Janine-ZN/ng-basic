@@ -6,7 +6,7 @@ import { RoutesModule } from './routes/routes.module';
 
 import { AppComponent } from './app.component';
 import { NoDataPipe } from './core/no-data.pipe';
-import { DirectiveBasicModule } from './routes/directive-basic/directive-basic.module';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { DirectiveBasicModule } from './routes/directive-basic/directive-basic.m
     BrowserModule,
     FormsModule,
     NgZorroAntdModule,
-    DirectiveBasicModule,
+    HomeModule,
     RoutesModule
   ],
   bootstrap: [AppComponent],
