@@ -7,7 +7,7 @@ import { RoutesModule } from './routes/routes.module';
 import { AppComponent } from './app.component';
 import { NoDataPipe } from './core/no-data.pipe';
 import { HomeModule } from './home/home.module';
-
+import { PageNotFoundModule } from './routes/page-not-found/page-not-found.module';
 
 @NgModule({
   // 声明组件
@@ -21,6 +21,7 @@ import { HomeModule } from './home/home.module';
     FormsModule,
     NgZorroAntdModule,
     HomeModule,
+    PageNotFoundModule,
     RoutesModule
   ],
   bootstrap: [AppComponent],

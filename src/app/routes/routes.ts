@@ -1,4 +1,5 @@
 import { HomeComponent } from '../home/home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page/page-not-found/page-not-found.component';
 
 export const routes = [
     { path: '', component: HomeComponent },
@@ -15,5 +16,8 @@ export const routes = [
                 path: 'form', loadChildren: './form/form.module#FormModule'
             },
         ]
-    }
+    },
+    /* {
+        path: '**', component: PageNotFoundComponent
+    } */
 ];

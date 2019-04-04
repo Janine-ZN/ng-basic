@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectiveBasicComponent implements OnInit {
   private title: String = '我是一个div';
+  private msg = '<h1>我是innerHTML</h1>';
   constructor() { }
 
   ngOnInit() {
