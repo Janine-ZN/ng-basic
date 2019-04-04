@@ -1,36 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
-
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
+import { RoutesModule } from './routes/routes.module';
 
 import { AppComponent } from './app.component';
-import { RxjsAsyComponent } from './components/views/rxjs-asy/rxjs-asy.component';
-import { BasicComponent } from './components/views/basic/basic.component';
-import { AntZorroComponent } from './components/views/ant-zorro/ant-zorro.component';
-import { FormComponent } from './components/views/form/form.component';
-import { SearchComponent } from './components/views/search/search.component';
-import { FormValidationComponent } from './components/views/form-validation/form-validation.component';
-import { FromTemplateValidationComponent } from './components/views/from-template-validation/from-template-validation.component';
 import { NoDataPipe } from './core/no-data.pipe';
-// import { AdminModule } from './components/routes/admin/admin.module';
+import { DirectiveBasicModule } from './routes/directive-basic/directive-basic.module';
 
-const appRoutes: Routes = [
-  { path: 'admin', loadChildren: './components/routes/admin/admin.module#AdminModule' },
-];
 
 @NgModule({
   // 声明组件
   declarations: [
     AppComponent,
-    RxjsAsyComponent,
-    BasicComponent,
-    AntZorroComponent,
-    FormComponent,
-    SearchComponent,
-    FormValidationComponent,
-    FromTemplateValidationComponent,
     NoDataPipe
   ],
   // 导入模板
@@ -38,10 +20,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     NgZorroAntdModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+    DirectiveBasicModule,
+    RoutesModule
   ],
   bootstrap: [AppComponent],
   /** 配置 ng-zorro-antd 国际化（文案 及 日期） **/

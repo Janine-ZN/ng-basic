@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/ng-zorro-antd/ng-zorro-antd.min.css';
+html {
+  font-size: 100%;
+
+  body {
+    font-size: 1em;
+
+    #container {
+      width: 60em;
+      border: 1px solid red;
+    }
+  }
+}

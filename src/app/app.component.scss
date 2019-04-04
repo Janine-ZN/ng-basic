@@ -1,10 +1,27 @@
 $font_size:green;
-.myFont{
-  color:$font_size
+
+.myFont {
+  color: $font_size
 }
-.left,.content,.right{
+
+.left,
+.content,
+.right {
   width: 420px;
   height: 600px;
   float: left;
   border: 1px solid #333;
+}
+
+html {
+  font-size: 100%;
+
+  body {
+    font-size: 1em;
+
+    #container {
+      width: 60em;
+      border: 1px solid red;
+    }
+  }
 }
