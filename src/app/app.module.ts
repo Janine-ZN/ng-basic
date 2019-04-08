@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { RoutesModule } from './routes/routes.module';
 
@@ -22,7 +23,8 @@ import { PageNotFoundModule } from './routes/page-not-found/page-not-found.modul
     NgZorroAntdModule,
     HomeModule,
     PageNotFoundModule,
-    RoutesModule
+    RoutesModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent],
   /** 配置 ng-zorro-antd 国际化（文案 及 日期） **/

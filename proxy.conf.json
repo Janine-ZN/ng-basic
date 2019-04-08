@@ -1,0 +1,12 @@
+{
+  "**": {
+    "target": "http://localhost:8000",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/example": {
+    "target": "https://www.easy-mock.com/mock/5c69592d7ea13651cdd44fda",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
