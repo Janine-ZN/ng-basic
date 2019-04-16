@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBasicComponent } from './form-basic/form-basic.component';
 import { Routes, RouterModule } from '@angular/router';
-import { TemplateFormComponent } from './template-form/template-form.component';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { FormMenuComponent } from './form-menu/form-menu.component';
 import { FromReactiveComponent } from './from-reactive/from-reactive.component';
@@ -14,7 +13,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [FormBasicComponent, TemplateFormComponent, FormMenuComponent, FromReactiveComponent, FormTemplateComponent],
+  declarations: [FormBasicComponent, FormMenuComponent, FromReactiveComponent, FormTemplateComponent],
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
