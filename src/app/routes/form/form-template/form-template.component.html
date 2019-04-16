@@ -1,8 +1,16 @@
-<form action="/regist" method="post">
-  <div>用户名: <input type="text" required pattern="[a-zA-z0-9]+"></div>
-  <div>手机号: <input type="text"></div>
-  <div>邮政编码: <input type="number" minlength="100000" maxlength="999999"></div>
-  <div>密码: <input type="password"></div>
-  <div>确认密码: <input type="password"></div>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+  <div>
+    用户名:<input type="text" #username="ngModel" ngModel name="username">
+  </div>
+  <div>手机号: <input type="text" ngModel name="phone"></div>
+  <div>邮政编码: <input type="number" ngModel name="number"></div>
+  <div ngModelGroup="passwordGroup">
+    <div>密码: <input type="password" ngModel name="password"></div>
+    <div>确认密码: <input type="password" ngModel name="pconfirm"></div>
+  </div>
   <button type="submit"> 注册 </button>
 </form>
+<div>
+  {{ myForm.value | json }}
+</div>
+
