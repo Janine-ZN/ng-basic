@@ -10,6 +10,9 @@ export const routes = [
                 path: '', redirectTo: '/home/directive', pathMatch: 'full'
             },
             {
+                path: 'news', loadChildren: './news/news.module#NewsModule'
+            },
+            {
                 path: 'directive', loadChildren: './directive/directive.module#DirectiveModule'
             },
             {
