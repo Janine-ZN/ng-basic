@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { Routes, RouterModule } from '@angular/router';
 import { DirectiveBasicComponent } from './page/directive-basic/directive-basic.component';
 
@@ -13,7 +13,7 @@ const routes: Routes = [
   declarations: [DirectiveBasicComponent],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
+    SharedModule
   ]
 })
 export class DirectiveModule { }

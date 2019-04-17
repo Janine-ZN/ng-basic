@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { FormBasicComponent } from './form-basic/form-basic.component';
 import { Routes, RouterModule } from '@angular/router';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { FormBasicComponent } from './form-basic/form-basic.component';
 import { FormMenuComponent } from './form-menu/form-menu.component';
 import { FromReactiveComponent } from './from-reactive/from-reactive.component';
 import { FormTemplateComponent } from './form-template/form-template.component';
+
 const routes: Routes = [
   {
     path: '', component: FormBasicComponent
@@ -17,9 +16,7 @@ const routes: Routes = [
   declarations: [FormBasicComponent, FormMenuComponent, FromReactiveComponent, FormTemplateComponent],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule,
-    NgZorroAntdModule,
-    FormsModule
+    SharedModule,
   ]
 })
 export class FormModule { }
