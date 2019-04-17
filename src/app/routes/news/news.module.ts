@@ -8,18 +8,29 @@ const routes: Routes = [
   {
     path: '', component: NewsListComponent,
   },
-  /* {
+  {
     path: 'news-list', component: NewsListComponent,
   },
-  {
+  /*{
+    path: 'news-detail/:id', component: NewsDetailComponent,
+  }*/
+  /*{
     path: 'news-detail', component: NewsDetailComponent,
-  }, */
+  }*/
+  {
+    path: 'news-detail',
+    component: NewsDetailComponent,
+    data: {
+      title: '我是详情页',
+      subtitle: '我是详情子页'
+    }
+  }
 ];
 
 @NgModule({
   declarations: [NewsListComponent, NewsDetailComponent],
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forChild(routes),
     SharedModule
   ]
 })
