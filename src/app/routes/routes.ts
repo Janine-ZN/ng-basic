@@ -21,6 +21,9 @@ export const routes = [
             {
                 path: 'observable', loadChildren: './observable/observable.module#ObservableModule'
             },
+            {
+                path: 'basic', loadChildren: './basic/basic.module#BasicModule'
+            },
         ]
     },
     /* {

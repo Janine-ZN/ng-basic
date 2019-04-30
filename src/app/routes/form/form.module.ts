@@ -13,7 +13,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [FormBasicComponent, FormMenuComponent, FromReactiveComponent, FormTemplateComponent],
+  declarations: [
+    FormBasicComponent,
+    FormMenuComponent,
+    FromReactiveComponent,
+    FormTemplateComponent
+  ],
   imports: [
     RouterModule.forChild(routes),
     SharedModule,
