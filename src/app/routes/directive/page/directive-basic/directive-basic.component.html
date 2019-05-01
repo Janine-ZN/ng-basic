@@ -21,8 +21,15 @@
       <td> {{e.ename}} </td>
       <td> {{e.gender==1?'男':'女'}} </td>
       <td>
-          <button (click)="delete(i)">删除</button>
+        <button (click)="delete(i)">删除</button>
       </td>
     </tr>
   </thead>
+  <button (click)="isShow=!isShow">显示与隐藏</button>
+  <ng-container *ngIf="isShow; else noShow">
+    显示
+  </ng-container>
+  <ng-template #noShow>
+    隐藏
+  </ng-template>
 </table>
