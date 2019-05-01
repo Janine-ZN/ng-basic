@@ -1,2 +1,28 @@
 <div [title]='title'>鼠标移上去</div>
 <div [innerHTML]='msg'></div>
+<button (click)="addScore()">给数据添加随机数</button>
+<h3>遍历数组</h3>
+<ul>
+  <li *ngFor="let score of scores;let i=index">
+    {{score}}--{{i}}
+  </li>
+</ul>
+<h3>删除数据</h3>
+<table>
+  <thead>
+    <tr>
+      <th>编号</th>
+      <th>姓名</th>
+      <th>性别</th>
+      <th>操作</th>
+    </tr>
+    <tr *ngFor="let e of elist">
+      <td> {{e.eid}} </td>
+      <td> {{e.ename}} </td>
+      <td> {{e.gender==1?'男':'女'}} </td>
+      <td>
+          <button (click)="delete(i)">删除</button>
+      </td>
+    </tr>
+  </thead>
+</table>

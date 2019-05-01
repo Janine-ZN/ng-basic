@@ -1,2 +1,18 @@
 <img [src]="imgUrl" alt="">
 <button (click)="changeImg()">更换图片</button>
+<hr>
+
+<h3>员工信息</h3>
+<div>员工姓名：{{emp.ename}}</div>
+<div>员工姓名：{{emp.ename.toUpperCase()}}</div>
+<div>员工姓名：{{emp.ename.toUpperCase().slice(2)}}</div>
+<div>员工薪资：{{'¥'+emp.salary*12}}</div>
+<div>员工性别：{{emp.gender==1 ? '男':'女'}}</div>
+<div>员工生日：{{emp.birthdate}}</div>
+<div>员工项目：{{emp.projectList}}</div>
+<ul>
+  <li>{{emp.projectList[0]}}</li>
+  <li>{{emp.projectList[1]}}</li>
+  <li>{{emp.projectList[2]}}</li>
+</ul>
+<div>{{showInfo()}}</div>
