@@ -9,6 +9,7 @@ export class DirectiveBasicComponent implements OnInit {
   private title: String = '我是一个div';
   private msg = '<h1>我是innerHTML</h1>';
   isShow = true;
+  status = 3;
   scores = [89, 91, 71];
   elist = [
     { eid: 101, ename: 'dingding', gender: 1 },

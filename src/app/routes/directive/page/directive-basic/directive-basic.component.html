@@ -16,6 +16,8 @@
       <th>性别</th>
       <th>操作</th>
     </tr>
+  </thead>
+  <tbody>
     <tr *ngFor="let e of elist">
       <td> {{e.eid}} </td>
       <td> {{e.ename}} </td>
@@ -24,12 +26,23 @@
         <button (click)="delete(i)">删除</button>
       </td>
     </tr>
-  </thead>
-  <button (click)="isShow=!isShow">显示与隐藏</button>
-  <ng-container *ngIf="isShow; else noShow">
-    显示
-  </ng-container>
-  <ng-template #noShow>
-    隐藏
-  </ng-template>
+  </tbody>
 </table>
+<button (click)="isShow=!isShow">显示与隐藏</button>
+<ng-container *ngIf="isShow; else noShow">
+  显示
+</ng-container>
+<ng-template #noShow>
+  隐藏
+</ng-template>
+<div [ngSwitch]="status">
+  <p *ngSwitchCase="1">
+    等待...
+  </p>
+  <p *ngSwitchCase="2">
+    完结...
+  </p>
+  <p *ngSwitchDefault>
+    走起...
+  </p>
+</div>
