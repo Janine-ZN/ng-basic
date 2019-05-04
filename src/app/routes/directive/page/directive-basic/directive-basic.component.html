@@ -46,3 +46,15 @@
     走起...
   </p>
 </div>
+<h3>商品列表</h3>
+<div *ngFor="let p of pList;let i=index">
+  <img [src]="p.pic" alt="">
+  <p>¥{{p.price}} </p>
+  <p>¥{{p.title}} </p>
+  <button (click)="dese(i)">-</button>
+  <span>{{p.count}} </span>
+  <button (click)="inc(i)">+</button>
+  <br>
+  <button (click)="deleteProduce(i)">删除商品</button>
+</div>
+<button appCustom>555</button>
