@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WordsService } from 'src/app/core/service/words.service';
 
 @Component({
   selector: 'app-display-word',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayWordComponent implements OnInit {
   list = [];
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private wordsService: WordsService) {
+    this.list = this.wordsService.list;
   }
 
+  ngOnInit() {}
 }

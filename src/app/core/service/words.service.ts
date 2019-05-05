@@ -10,8 +10,9 @@ export class WordsService {
   add(word) {
     this.list.push(word);
   }
-  getAll() {
+
+  /* getAll() {
     return this.list;
-  }
+  } */
 
 }
