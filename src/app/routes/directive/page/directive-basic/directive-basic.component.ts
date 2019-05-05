@@ -16,6 +16,7 @@ export class DirectiveBasicComponent implements OnInit {
     { eid: 102, ename: 'tuangtuang', gender: 0 },
     { eid: 103, ename: 'biangbiang', gender: 1 },
   ];
+  gender = 1;
   addScore() {
     const num = Math.floor(Math.random() * 100);
     this.scores.push(num);
