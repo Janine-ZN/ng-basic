@@ -21,6 +21,7 @@ export class DirectiveBasicComponent implements OnInit {
     { pid: 102, title: '戴尔燃8000', price: 10000, count: 10, pic: 'assets/imgs/yichan02.jpg' },
     { pid: 103, title: '戴尔燃9000', price: 7000, count: 15, pic: 'assets/imgs/yichan03.jpg' },
   ];
+  gender = 1;
   addScore() {
     const num = Math.floor(Math.random() * 100);
     this.scores.push(num);
