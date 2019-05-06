@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { SaveWordComponent } from './save-word/save-word.component';
 import { ServerComponent } from './server.component';
 import { DisplayWordComponent } from './display-word/display-word.component';
+import { TodoInputComponent } from './todo-input/todo-input.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 const routes: Routes = [
   {
@@ -13,9 +15,13 @@ const routes: Routes = [
   }
 ];
 
-
 @NgModule({
-  declarations: [SaveWordComponent, ServerComponent, DisplayWordComponent],
+  declarations: [
+    SaveWordComponent,
+    ServerComponent,
+    DisplayWordComponent,
+    TodoInputComponent,
+    TodoListComponent],
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
