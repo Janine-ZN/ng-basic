@@ -16,3 +16,5 @@
   <li>{{emp.projectList[2]}}</li>
 </ul>
 <div>{{showInfo()}}</div>
+<app-children [toChildren]='text' (toFather)='getData($event)'></app-children>
+<div>{{data}}</div>

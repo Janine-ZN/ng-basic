@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basic.component.scss']
 })
 export class BasicComponent implements OnInit {
+  text = '我从爸爸那里来';
+  data = '';
   imgUrl: any = 'assets/imgs/yichan05.jpg';
   num = 12.5;
   emp = {
@@ -24,7 +26,10 @@ export class BasicComponent implements OnInit {
     console.log('num===>', num);
     this.imgUrl = 'assets/imgs/yichan0' + num + '.jpg';
   }
-
+  getData(data) {
+    this.data = data;
+    console.log('我是从父组件传来的data', data);
+  }
   constructor() { }
 
   ngOnInit() {
