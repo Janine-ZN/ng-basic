@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Global } from 'src/app/shared/global';
 
 @Component({
   selector: 'app-children',
@@ -7,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChildrenComponent implements OnInit {
   private userInput = '';
+  childrenText = '';
   @Input() toChildren = null;
   @Output() toFather = new EventEmitter();
   doClick() {
@@ -17,6 +19,7 @@ export class ChildrenComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.childrenText = Global.TEST;
   }
 
 }
