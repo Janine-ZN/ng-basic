@@ -1,8 +1,8 @@
 <nz-layout class="layout">
   <nz-header>
     <div class="logo"></div>
-    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
-      <li nz-menu-item>
+    <ul nz-menu nzMode="horizontal" nz-menu [nzTheme]="'dark'" style="line-height: 64px;">
+      <li nz-menu-item nzSelected>
         <a routerLink="/home/basic" routerLinkActive="active">基础知识</a>
       </li>
       <li nz-menu-item>
@@ -13,6 +13,13 @@
       </li>
       <li nz-menu-item>
         <a routerLink="/home/form">form 表单</a>
+      </li>
+      <li nz-submenu>
+        <span title>路由跳转</span>
+        <ul>
+          <li nz-menu-item>router-link传参</li>
+          <li nz-menu-item>navigate传参</li>
+        </ul>
       </li>
       <li nz-menu-item>
         <a routerLink="/home/server">服务与依赖注入</a>
