@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 // share zorro
 import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { BreadcrumbComponent } from './component/breadcrumb/breadcrumb.component';
 
 // share component
 
@@ -16,7 +17,7 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 @NgModule({
   // 用来注册组件和管道
-  declarations: [],
+  declarations: [BreadcrumbComponent],
   // 用来注册模板
   imports: [
     CommonModule,

@@ -7,25 +7,32 @@ export const routes = [
         path: 'home', component: HomeComponent,
         children: [
             {
-                path: '', redirectTo: '/home/directive', pathMatch: 'full'
+                path: '', redirectTo: '/home/directive', pathMatch: 'full',
+                data: { breadcrumb: '首页' }
             },
             {
-                path: 'news', loadChildren: './news/news.module#NewsModule'
+                path: 'news', loadChildren: './news/news.module#NewsModule',
+                data: { breadcrumb: '新闻' }
             },
             {
-                path: 'directive', loadChildren: './directive/directive.module#DirectiveModule'
+                path: 'directive', loadChildren: './directive/directive.module#DirectiveModule',
+                data: { breadcrumb: '指令' }
             },
             {
-                path: 'form', loadChildren: './form/form.module#FormModule'
+                path: 'form', loadChildren: './form/form.module#FormModule',
+                data: { breadcrumb: '表单' }
             },
             {
-                path: 'observable', loadChildren: './observable/observable.module#ObservableModule'
+                path: 'observable', loadChildren: './observable/observable.module#ObservableModule',
+                data: { breadcrumb: 'observable' }
             },
             {
-                path: 'server', loadChildren: './server/server.module#ServerModule'
+                path: 'server', loadChildren: './server/server.module#ServerModule',
+                data: { breadcrumb: '服务' }
             },
             {
-                path: 'basic', loadChildren: './basic/basic.module#BasicModule'
+                path: 'basic', loadChildren: './basic/basic.module#BasicModule',
+                data: { breadcrumb: '基础' }
             },
         ]
     },
