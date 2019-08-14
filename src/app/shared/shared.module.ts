@@ -6,18 +6,27 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 // share zorro
 import { NgZorroAntdModule } from 'ng-zorro-antd';
-import { BreadcrumbComponent } from './component/breadcrumb/breadcrumb.component';
+
 
 // share component
+import { BreadcrumbComponent } from './component/breadcrumb/breadcrumb.component';
 
 // share pipe
 
 // share directive
 
+const SHARECOMPONENT = [
+  BreadcrumbComponent,
+];
 
 @NgModule({
   // 用来注册组件和管道
-  declarations: [BreadcrumbComponent],
+  declarations: [
+    ...SHARECOMPONENT,
+  ],
+  entryComponents: [
+    // ...SHARECOMPONENT,
+  ],
   // 用来注册模板
   imports: [
     CommonModule,
@@ -32,7 +41,8 @@ import { BreadcrumbComponent } from './component/breadcrumb/breadcrumb.component
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    ...SHARECOMPONENT,
   ]
 })
 export class SharedModule { }
