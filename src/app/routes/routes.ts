@@ -23,6 +23,10 @@ export const routes = [
                 data: { breadcrumb: '表单' }
             },
             {
+                path: 'routers-jump', loadChildren: './routes-jump/routes-jump.module#RoutesJumpModule',
+                data: { breadcrumb: '路由' }
+            },
+            {
                 path: 'observable', loadChildren: './observable/observable.module#ObservableModule',
                 data: { breadcrumb: 'observable' }
             },
