@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd, Params, PRIMARY_OUTLET } from '@angular/router';
-/* import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/filter'; */
 import { filter } from 'rxjs/operators';
 
 interface IBreadcrumb {
@@ -19,10 +17,6 @@ interface IBreadcrumb {
 export class BreadcrumbComponent implements OnInit {
   public breadcrumbs: IBreadcrumb[];
 
-  /**
-  * @class DetailComponent
-  * @constructor
-  */
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router
@@ -30,71 +24,66 @@ export class BreadcrumbComponent implements OnInit {
     this.breadcrumbs = [];
   }
 
-  /**
-  * Let's go!
-  *
-  * @class DetailComponent
-  * @method ngOnInit
-  */
   ngOnInit() {
-    const ROUTE_DATA_BREADCRUMB: string = 'breadcrumb';
-
-    // subscribe to the NavigationEnd event
+    // 订阅NavigationEnd事件
     this.router.events.pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(event => {
-        // set breadcrumbs
+        // 设置面包屑
         const root: ActivatedRoute = this.activatedRoute.root;
+        console.log('=== janine.树的的根路由', root);
         this.breadcrumbs = this.getBreadcrumbs(root);
       });
   }
 
   /**
-  * Returns array of IBreadcrumb objects that represent the breadcrumb
-  *
-  * @class DetailComponent
-  * @method getBreadcrumbs
-  * @param {ActivateRoute} route
-  * @param {string} url
-  * @param {IBreadcrumb[]} breadcrumbs
-  */
+   * 返回表示面包屑的IBreadcrumb对象的数组
+   */
   private getBreadcrumbs(route: ActivatedRoute, url: string = '', breadcrumbs: IBreadcrumb[] = []): IBreadcrumb[] {
-    const ROUTE_DATA_BREADCRUMB: string = 'breadcrumb';
+    const ROUTE_DATA_BREADCRUMB = 'breadcrumb';
 
-    // get the child routes
+    // 得到子路由
     const children: ActivatedRoute[] = route.children;
+    console.log('=== janine.有多少子路由 ===', children);
 
-    // return if there are no more children
+    // 如果没有子路由返回
     if (children.length === 0) {
+      console.log('=== janine.没有子路由是 ===', breadcrumbs);
       return breadcrumbs;
     }
 
-    // iterate over each children
+    // 遍历每个子元素
     for (const child of children) {
-      // verify primary route
+      // 验证主路由
       if (child.outlet !== PRIMARY_OUTLET) {
         continue;
       }
 
-      // verify the custom data property 'breadcrumb' is specified on the route
+      // 验证路由上指定的自定义数据属性'breadcrumb'
       if (!child.snapshot.data.hasOwnProperty(ROUTE_DATA_BREADCRUMB)) {
         return this.getBreadcrumbs(child, url, breadcrumbs);
       }
 
-      // get the route's URL segment
+      // 获取路由的URL进行分割
       const routeURL: string = child.snapshot.url.map(segment => segment.path).join('/');
+      // append route URL to URL 追加路由的url到url
+      if (routeURL) {
+        console.log('=== janine.routeURL ===', routeURL);
+        url += `/${routeURL}`;
+      }
 
-      // append route URL to URL
-      url += `/${routeURL}`;
-
-      // add breadcrumb
+      // 添加面包屑
       const breadcrumb: IBreadcrumb = {
         label: child.snapshot.data[ROUTE_DATA_BREADCRUMB],
         params: child.snapshot.params,
         url: url
       };
-      breadcrumbs.push(breadcrumb);
+      if (child.component) {
+        breadcrumbs.push(breadcrumb);
+      }
 
-      // recursive
+      console.log('=== janine.breadcrumbs === ', breadcrumb);
+
+      // 递归
       return this.getBreadcrumbs(child, url, breadcrumbs);
     }
   }

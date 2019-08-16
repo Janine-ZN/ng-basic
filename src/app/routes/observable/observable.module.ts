@@ -5,7 +5,8 @@ import { ObsProxyComponent } from './page/obs-proxy/obs-proxy.component';
 
 const routes: Routes = [
   {
-    path: '', component: ObsProxyComponent
+    path: '', component: ObsProxyComponent,
+    data: { breadcrumb: 'observable' }
   }
 ];
 

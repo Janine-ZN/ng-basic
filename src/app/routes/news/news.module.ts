@@ -10,6 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'news-list', component: NewsListComponent,
+    data: { breadcrumb: '新闻列表' }
   },
   /*{
     path: 'news-detail/:id', component: NewsDetailComponent,
@@ -22,7 +23,8 @@ const routes: Routes = [
     component: NewsDetailComponent,
     data: {
       title: '我是详情页',
-      subtitle: '我是详情子页'
+      subtitle: '我是详情子页',
+      data: { breadcrumb: '新闻详情' }
     }
   }
 ];

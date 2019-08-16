@@ -18,7 +18,7 @@ export class BasicComponent implements OnInit {
     projectList: ['项目1', '项目2', '项目3'],
   };
   showInfo() {
-    console.log('调用了showInfo()');
+    // console.log('调用了showInfo()');
     return '123';
   }
   changeImg() {

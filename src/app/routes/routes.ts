@@ -2,21 +2,26 @@ import { HomeComponent } from '../home/page/home.component';
 import { PageNotFoundComponent } from './page-not-found/page/page-not-found/page-not-found.component';
 
 export const routes = [
-    { path: '', component: HomeComponent },
+    {
+        // 路由为空时，自动重定向到/home
+        path: '',
+        redirectTo: '/home/basic',
+        pathMatch: 'full',
+    },
     {
         path: 'home', component: HomeComponent,
         children: [
             {
-                path: '', redirectTo: '/home/directive', pathMatch: 'full',
-                data: { breadcrumb: '首页' }
-            },
-            {
-                path: 'news', loadChildren: './news/news.module#NewsModule',
-                data: { breadcrumb: '新闻' }
+                path: 'basic', loadChildren: './basic/basic.module#BasicModule',
+                data: { breadcrumb: '基础' }
             },
             {
                 path: 'directive', loadChildren: './directive/directive.module#DirectiveModule',
                 data: { breadcrumb: '指令' }
+            },
+            {
+                path: 'news', loadChildren: './news/news.module#NewsModule',
+                data: { breadcrumb: '新闻' }
             },
             {
                 path: 'form', loadChildren: './form/form.module#FormModule',
@@ -33,11 +38,7 @@ export const routes = [
             {
                 path: 'server', loadChildren: './server/server.module#ServerModule',
                 data: { breadcrumb: '服务' }
-            },
-            {
-                path: 'basic', loadChildren: './basic/basic.module#BasicModule',
-                data: { breadcrumb: '基础' }
-            },
+            }
         ]
     },
     /* {

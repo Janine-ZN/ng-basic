@@ -10,6 +10,7 @@ import { CodeRouterNavigateComponent } from './code-router-navigate/code-router-
 const routes: Routes = [
   {
     path: '', component: RoutesJumpComponent,
+    // data: { breadcrumb: '路由' },
     children: [
       {
         path: '', component: TagRouterLinkComponent,
