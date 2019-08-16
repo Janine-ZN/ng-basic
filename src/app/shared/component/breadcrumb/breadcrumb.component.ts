@@ -77,6 +77,8 @@ export class BreadcrumbComponent implements OnInit {
         params: child.snapshot.params,
         url: url
       };
+      // 此处的component如果为undefined，可能是因为懒加载，在查找时，没有找到component的值，
+      // 所以当component为undefined的时候就不往数组里追加，会重复
       if (child.component) {
         breadcrumbs.push(breadcrumb);
       }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 @Component({
   selector: 'app-news-detail',
   templateUrl: './news-detail.component.html',
@@ -13,13 +13,28 @@ export class NewsDetailComponent implements OnInit {
 
   ngOnInit() {
     // const id = this.route.snapshot.queryParams['id'];
+
     // const id = this.route.snapshot.paramMap.get('id');
     // const id = this.route.snapshot.params['id'];
-    const title = this.route.snapshot.data['title'];
-    const subtitle = this.route.snapshot.data['subtitle'];
+
+    /*  const title = this.route.snapshot.data['title'];
+     const subtitle = this.route.snapshot.data['subtitle']; */
+
+    /* this.route.queryParams.subscribe((params: Params) => {
+      const id = params['id'];
+      // const title = params['title'];
+      console.log('id==>', id);
+      // console.log('title==>', title);
+    }); */
     // console.log('id==>', id);
-    console.log('title==>', title);
-    console.log('subtitle==>', subtitle);
+    /* console.log('title==>', title);
+    console.log('subtitle==>', subtitle); */
+    /* this.route.params.subscribe((params: Params) => {
+      const id = params['id'];
+      // const title = params['title'];
+      console.log('id==>', id);
+      // console.log('title==>', title);
+    }); */
   }
 
 }
